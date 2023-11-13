@@ -1,0 +1,41 @@
+*{
+    font-family: Georgia;
+}
+.lewy-bok {
+    background-color: Maroon;
+    color:white;
+    height: 600px;
+    width: 30%;
+    float: left;
+}
+.prawy-bok {
+    align-items: start;
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+    float: left;
+}
+div {
+    display: flex;
+}
+footer {
+    background-color: dimgray;
+    color: white;
+}
+.prawy-bok p {
+    padding: 10px;
+}
+img {
+    padding: 10px;
+    border:1px solid white;
+}
+.przycisk1 {
+    background-color: indigo;
+}
+.przycisk2 {
+    background-color: steelblue;
+}
+.przycisk3 {
+    background-color: olive;
+}
