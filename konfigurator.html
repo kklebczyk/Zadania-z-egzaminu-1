@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl6.css"/>
+    <title>Style w JavaScript</title>
+    <script>
+        function colorchg() {
+            document.getElementsByClassName('prawy-bok')[0].style.backgroundColor='indigo';
+        }
+        function zmienkolor() {
+            document.getElementsByClassName('prawy-bok')[0].style.backgroundColor='steelblue';
+        }
+        function kolorzmien() {
+            document.getElementsByClassName('prawy-bok')[0].style.backgroundColor='olive';
+        }
+        function zmien(f) {
+            document.getElementsByClassName('prawy-bok')[0].style.color=f.kolory[f.kolory.selectedIndex].value;
+        }
+        function czcionka(){
+            const textsize = document.getElementById('input').value;
+            document.getElementsByClassName('prawy-bok')[0].style.fontSize=textsize;
+        }
+        function ramka() {
+            if(document.getElementById('checkbox').checked == true){
+                document.getElementById('obraz').style.border='1px solid white';
+            }else {
+            document.getElementById('obraz').style.border='none';
+        }
+        }
+        function dysk(){
+            document.getElementsByClassName('lista')[0].style.listStyleType='disc';
+        }
+        function kwadrat(){
+            document.getElementsByClassName('lista')[0].style.listStyleType='square';
+        }
+        function okrag(){
+            document.getElementsByClassName('lista')[0].style.listStyleType='circle';
+        }
+    </script>
+</head>
+<body>
+    <section class="lewy-bok">
+        <h1>Konfigurator stylu</h1>
+        <p>Podaj kolor tła</p>
+        <button class="przycisk1" onclick="colorchg()">Indigo</button>
+        <button class="przycisk2" onclick="zmienkolor()">SteelBlue</button>
+        <button class="przycisk3" onclick="kolorzmien()">Olive</button>
+        <p>Podaj kolor czcionki</p>
+        <form>
+        <select name="kolory" onchange="zmien(this.form)">
+            <option value="white">White</option>
+            <option valeu="tan">Tan</option>
+            <option value="bisque">Bisque</option>
+            <option value="plum">Plum</option>
+        </select>
+        </form>
+        <p>Podaj rozmiar czcionki w procentach, np.200%</p>
+        <input id="input" onchange="czcionka()" type="text" value="100%"/>
+        <p>Czy rysunek ma mieć ramkę?</p>
+        <input onchange="ramka()" id="checkbox" type="checkbox" checked >Rysuj ramkę
+        <p>Jaki jest typ punktora listy?</p>
+        <input onclick="dysk()" type="radio" name="punktor" checked>dysk
+        <input onclick="kwadrat()" type="radio" name="punktor">kwadrat
+        <input onclick="okrag()" type="radio" name="punktor">okrąg
+    </section>
+    <section class="prawy-bok">
+        <div>
+        <img id="obraz" src="gibraltar.jpg" alt="półwysep Giblartar">
+        <ul class="lista">
+            <li>element 1</li>
+            <li>element 2</li>
+            <li>element 3</li>
+        </ul>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    </section>
+    <footer>
+        <span>Autor:12345678910</span>
+    </footer>
+</body>
+</html>
